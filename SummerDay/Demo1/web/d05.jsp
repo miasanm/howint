@@ -11,14 +11,18 @@
     <title>表单</title>
 </head>
 <body>
-
-<form>
+<!-- action 提交的数据传到的地址 默认本页面 method 提交方法 默认 get-->
+<!-- get  post 的区别：
+                 1.get的数据会显示在地址栏，post不会
+                 2.get的安全级别较低，post较高
+                 3.get请求数据大小有限制，post没有限制-->
+<form action="d03.jsp" method="post">
     手机号码：<input type="text" name="tel"/><br/>
     密码：<input type="password" name="psw"/><br/>
     性别：<input type="radio" name="sex" value="1" checked/>男<input type="radio" name="sex" value="2"/>女<br/>
-    爱好：<input type="checkbox" name="hobby"/>羽毛球<input type="checkbox" name="hobby"/>乒乓球
-    <input type="checkbox" name="hobby"/>排球<br/>
-    文件：<input type="file" name="file"/><br/>
+    爱好：<input type="checkbox" name="hobby" value="ym"/>羽毛球<input type="checkbox" name="hobby" value="pp"/>乒乓球
+    <input type="checkbox" name="hobby" value="pq"/>排球<br/>
+    文件：<input type="file" name="file" value="data"/><br/>
     生日：
     <select name="year">
         <option value="1991">1991</option>
@@ -46,7 +50,12 @@
     <br/>
     隐藏项：<input type="hidden" name="hid"/>
     <br/>
-    <input type="submit"name="提交">
+    <input type="submit"name="提交"/>
+    <br/>
+    <input type="image" src="tj.png" width="50" height="30"/>
+    <br/>
+    <input type="reset"/>
+    <input type="button" value="普通按钮"/>
 
 </form>
 </body>
